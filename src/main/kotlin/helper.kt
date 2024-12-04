@@ -18,3 +18,8 @@ fun parseFileByLine(fileName: String) : List<List<Int>> {
 
     return output
 }
+
+fun readFile(fileName: String) : String{
+    var file = File(fileName)
+    return file.readText()
+}
