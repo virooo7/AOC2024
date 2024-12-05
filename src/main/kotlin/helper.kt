@@ -23,3 +23,13 @@ fun readFile(fileName: String) : String{
     var file = File(fileName)
     return file.readText()
 }
+
+fun readFileAsMatrix(fileName: String) : List<List<Char>>{
+    var file = File(fileName)
+    var output = mutableListOf<List<Char>>()
+    file.forEachLine { line ->
+        output.add(line.toMutableList())
+    }
+
+    return output
+}
